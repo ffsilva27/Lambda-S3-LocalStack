@@ -1,0 +1,41 @@
+service: teste
+frameworkVersion: '3'
+plugins:
+  - serverless-localstack
+custom:
+  localstack:
+    debug: true
+    stages:
+      - local
+      - dev
+provider:
+  name: aws
+  runtime: java11
+package:
+  artifact: build/libs/lambda_s3_localstack-dev-all.jar
+
+functions:
+  hello:
+    handler: com.serverless.Handler
+    events:
+      - http:
+          path: hello
+          method: get
+  listFile:
+    handler: com.serverless.HandlerList
+    events:
+      - http:
+          path: list-file
+          method: get
+  uploadFile:
+    handler: com.serverless.HandlerUpload
+    events:
+      - http:
+          path: upload-file
+          method: post
+  justTest:
+    handler: com.serverless.JustTest
+    events:
+      - http:
+          path: just-test
+          method: get
