@@ -1,6 +1,6 @@
-# Projeto Lambda + S3 + LocalStack
+# :man_technologist: Projeto Lambda + S3 + LocalStack :man_technologist:
 
-# Objetivo
+# Objetivo :scroll:
 
 Desenvolvimento de lambdas functions que permitem o acesso a um bucket da S3.</br>
 </br> As funções lambda permitirão realizar o upload de arquivos em um diretório específico, 
@@ -8,6 +8,8 @@ assim como listar todos os arquivos e realizar o download quando necessário.</b
 </br> Todos os ambientes disponíveis nesse projeto (API Gateway, lambda e S3) estarão rodando localmente, 
 recurso permitido através do LocalStack, ferramenta que permite simular todos os ambientes 
 da AWS em uma máquina local.
+
+___________________________________________________________________________________________________________________________________________________________________
 
 ## Build
 
@@ -19,6 +21,8 @@ localstack contida nesse repositório. </br>
 
 </br>`docker compose up`
 
+___________________________________________________________________________________________________________________________________________________________________
+
 ## Deploy
 Para facilitar o deploy das funções lambda, estou utilizando o serverless framework, como o nome já
 surgere, é um framework voltado pra aplicações serverless.
@@ -27,6 +31,8 @@ Com o docker em execução, no terminal, rodar o seguinte comando:
 
 
 </br>`serverless deploy --stage local`
+
+___________________________________________________________________________________________________________________________________________________________________
 
 ## Orientações para geração de um projeto do zero
 
