@@ -44,8 +44,9 @@ class HandlerUpload(
 
             // Nome do bucket e caminho do objeto no S3
             val bucketName = "s3-helloworld"
-            val fileName: String = input!!["fileName"] as String
-            val folder: String = input["folder"] as String
+            val params = input["queryStringParameters"] as Map<*, *>
+            val fileName: String = params["fileName"] as String
+            val folder: String = params["folder"] as String
 
             LOG.info("Folder: $folder")
             LOG.info("BucketName: $bucketName")

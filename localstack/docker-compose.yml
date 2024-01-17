@@ -13,6 +13,7 @@ services:
       - LAMBDA_EXECUTOR=${LAMBDA_EXECUTOR-} # local, docker, docker-reuse
       - DOCKER_HOST=unix:///var/run/docker.sock
       - LOCALSTACK_API_KEY=${LOCALSTACK_API_KEY-}
+      - HOSTNAME_EXTERNAL=awslocal
     volumes:
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"

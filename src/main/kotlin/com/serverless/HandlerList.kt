@@ -67,7 +67,7 @@ class HandlerList(
             }
         } catch (e: S3Exception) {
             e.printStackTrace()
-            val message = "Erro ao listar os arquivos do S3: ${e.message}"
+            val message = "Erro ao listar os arquivos do S3 - S3Exception: ${e.message}"
             LOG.error(message)
             return ApiGatewayResponse.build {
                 statusCode = 500
@@ -78,7 +78,7 @@ class HandlerList(
             }
         } catch (e: RuntimeException) {
             e.printStackTrace()
-            val message = "Erro ao listar os arquivos do S3: ${e.message}"
+            val message = "Erro ao listar os arquivos do S3 - RuntimeException: ${e.message}"
             LOG.error(message)
             return ApiGatewayResponse.build {
                 statusCode = 500
@@ -89,7 +89,7 @@ class HandlerList(
             }
         } catch (e: IllegalArgumentException) {
             e.printStackTrace()
-            val message = "Erro ao listar os arquivos do S3: ${e.message}"
+            val message = "Erro ao listar os arquivos do S3 - IllegalArgumentException: ${e.message}"
             LOG.error(message)
             return ApiGatewayResponse.build {
                 statusCode = 500
