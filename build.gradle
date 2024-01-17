@@ -28,11 +28,11 @@ repositories {
 
 // If requiring AWS JDK, uncomment the dependencyManagement to use the bill of materials
 //   https://aws.amazon.com/blogs/developer/managing-dependencies-with-aws-sdk-for-java-bill-of-materials-module-bom/
-//dependencyManagement {
-//    imports {
-//        mavenBom 'com.amazonaws:aws-java-sdk-bom:1.11.688'
-//    }
-//}
+dependencyManagement {
+    imports {
+        mavenBom 'com.amazonaws:aws-java-sdk-bom:1.11.688'
+    }
+}
 
 dependencies {
   api (
