@@ -39,3 +39,9 @@ functions:
       - http:
           path: just-test
           method: get
+  downloadFile:
+    handler: com.serverless.HandlerDownload
+    events:
+      - http:
+          path: download-file
+          method: get

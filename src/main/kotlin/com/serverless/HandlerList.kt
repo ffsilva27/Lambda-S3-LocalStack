@@ -48,7 +48,7 @@ class HandlerList(
                 .bucket(bucketName)
                 .prefix(String.format("%s/", folder))
                 .build()
-
+            LOG.info(getObjectRequest.toString())
             LOG.info("Obtendo lista de arquivos da S3...")
             val objectResponse = s3Client.listObjects(getObjectRequest)
 
