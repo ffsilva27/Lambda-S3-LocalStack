@@ -4,6 +4,7 @@ plugins:
   - serverless-localstack
 custom:
   localstack:
+    host: http://127.0.0.1
     debug: true
     stages:
       - local
@@ -11,6 +12,14 @@ custom:
 provider:
   name: aws
   runtime: java11
+  timeout: 15
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:*
+          Resource: "*"
 package:
   artifact: build/libs/lambda_s3_localstack-dev-all.jar
 

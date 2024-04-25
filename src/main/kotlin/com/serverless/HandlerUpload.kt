@@ -52,7 +52,7 @@ class HandlerUpload(
             LOG.info("BucketName: $bucketName")
             LOG.info("FileName: $fileName")
 
-            val file: InputStream = ByteArrayInputStream(Base64.getDecoder().decode(input["file"] as String))
+            val file: InputStream = ByteArrayInputStream(Base64.getDecoder().decode(input["body"] as String))
             val key = java.lang.String.format("%s/%s", folder , fileName)
 
             LOG.info("Key: $key")

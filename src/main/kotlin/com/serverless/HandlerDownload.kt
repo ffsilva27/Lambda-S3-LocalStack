@@ -40,8 +40,9 @@ class HandlerDownload(
 
 
             val bucketName = "s3-helloworld"
-            val file = input["file"] as String
-            val key = String.format("%s/%s", input["folder"], file)
+            val params = input["queryStringParameters"] as Map<*, *>
+            val file = params["file"] as String
+            val key = String.format("%s/%s", params["folder"], file)
             LOG.info("Key: $key")
 
             LOG.info("Criando solicitação de download...")
