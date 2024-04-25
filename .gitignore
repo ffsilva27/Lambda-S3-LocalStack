@@ -5,6 +5,7 @@
 /.settings/
 .project
 .classpath
+.idea
 
 # Package Files
 *.jar
